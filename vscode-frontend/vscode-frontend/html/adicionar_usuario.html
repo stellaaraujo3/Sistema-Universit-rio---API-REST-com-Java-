@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adicionar Usuário - Sistema Universitário</title>
+  <link rel="stylesheet" href="/css/cadastro_usuario.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Adicionar Novo Usuário</h2>
+    <form id="formUsuario">
+      <label for="usuario">Usuário:</label>
+      <input type="text" id="usuario" name="usuario" required>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+
+      <label for="tipo">Tipo de Usuário:</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Selecione...</option>
+        <option value="aluno">Aluno</option>
+        <option value="admin">Administrador</option>
+      </select>
+
+      <label for="matricula">Matrícula (apenas para Aluno):</label>
+      <input type="text" id="matricula" name="matricula" placeholder="Digite a matrícula" disabled>
+
+      <button type="submit">Cadastrar Usuário</button>
+    </form>
+    <a href="/html/admin.html" class="link">Voltar ao menu</a>
+  </div>
+
+  <script src="/js/cadastro_usuario.js"></script>
+</body>
+</html>

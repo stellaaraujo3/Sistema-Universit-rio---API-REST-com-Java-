@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  background:linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/img/fundo-adm.jpg') no-repeat left bottom ;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: white;
+  padding: 30px;
+  margin-top: 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+h2 {
+  color: #900000;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.dados-aluno p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.botao {
+  display: block;
+  margin-top: 25px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.link:hover {
+  text-decoration: none;  /* Remove o sublinhado do link */
+  color: rgb(1, 6, 51);           /* Cor normal do texto */
+  transition: color 0.3s ease;  /* Suaviza a transição de cor */
+}
+.link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  padding: 5px;
+  margin: 10px;
+  color: inherit;         /* Herda a cor do texto pai */
+  outline: none;  
+
+}

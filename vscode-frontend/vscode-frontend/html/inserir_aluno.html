@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Inserir Novo Aluno</title>
+  <link rel="stylesheet" href="/css/formularios.css" />
+</head>
+
+<body>
+  <div>
+    <h2>Inserir Novo Aluno</h2>
+    <form id="formAluno">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required />
+
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" required />
+
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone" required />
+
+      <label for="dataNascimento">Data de Nascimento:</label>
+      <input type="date" id="dataNascimento" required />
+
+      <label for="curso">Curso:</label>
+      <input type="text" id="curso" required />
+
+      <button type="submit">Cadastrar</button>
+
+      <a href="/html/admin.html" class="link">Volta ao Menu Principal</a>
+    </form>
+    <div id="mensagem" style="color: rgb(255, 2, 2); margin-top: 10px;"></div>
+  </div>
+  <script src="/js/inserir-aluno.js"></script>
+</body>
+
+</html>

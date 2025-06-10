@@ -1,0 +1,91 @@
+/* Resetando alguns estilos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo geral para o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/img/fundo-adm.jpg') no-repeat left bottom;
+  margin: 0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* Estilizando o título */
+h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.letra a{
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Estilizando o container da lista (quadrado em volta da listagem) */
+.container {
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo levemente transparente */
+  padding: 20px;
+  border: 2px solid #007bff; /* Borda azul em volta */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor do container */
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Estilizando a lista */
+ul {
+  list-style: none; /* Remove os marcadores de lista */
+  padding: 0;
+  width: 100%;
+}
+
+/* Estilizando cada item da lista */
+li {
+  background-color: #fff; /* Fundo branco para cada item */
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar um efeito de profundidade */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Suaviza a transição para os efeitos de hover */
+}
+
+/* Efeito de hover nos itens da lista */
+li:hover {
+  background-color: #007bff; /* Altera a cor de fundo ao passar o mouse */
+  color: white; /* Muda a cor do texto para branco */
+  transform: translateY(-3px); /* Pequeno efeito de deslocamento ao passar o mouse */
+}
+
+/* Estilizando os itens da lista quando clicados (opcional) */
+li:active {
+  transform: translateY(1px); /* Desloca o item para baixo quando pressionado */
+}
+
+/* Definindo a cor padrão para o texto */
+li {
+  color: #333;
+}
+
+.link:hover {
+  text-decoration: none;  /* Remove o sublinhado do link */
+  color: rgb(1, 6, 51);           /* Cor normal do texto */
+  transition: color 0.3s ease;  /* Suaviza a transição de cor */
+ 
+}
+.link {
+   margin: 85px;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  
+}

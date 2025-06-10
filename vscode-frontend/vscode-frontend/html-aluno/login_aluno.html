@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login aluno</title>
+  <link rel="stylesheet" href="/css/style-principal.css">
+</head>
+<body>
+  <div class="background-image"></div>
+
+  <div class="login-container">
+    <img src="/img/logo-uni.png" alt="Logo da Instituição" class="logo">
+
+    <h2>Portal do Aluno</h2>
+
+    <form id="loginAdmForm" action="/html/aluno.html" method="get">
+      <input type="text" id="usuario" name="usuario" placeholder="Usuário" required />
+      <input type="password" id="senha" name="senha" placeholder="Senha" required />
+      <button type="submit">Entrar</button>
+    </form>
+
+    <div class="senha">
+      <a href="/html/esqueci-senha.html" class="esqueci-senha">Esqueci minha senha</a>
+    </div>
+  </div>
+
+  <script src="/js/login_adm.js"></script>
+</body>
+</html>

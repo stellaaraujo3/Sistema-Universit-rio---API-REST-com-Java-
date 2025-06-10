@@ -1,0 +1,86 @@
+/* Definindo um fundo degradê para o body */
+body {
+  background:linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/img/fundo-adm.jpg') no-repeat left bottom ;
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinha o conteúdo para o topo */
+  align-items: center;
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo do título */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+/* Estilizando o formulário */
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Estilo do label */
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Estilizando o campo de input */
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #4e9af1;
+}
+
+/* Estilizando o botão */
+button {
+  background-color: #4e9af1;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ab7;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.link:hover {
+  text-decoration: none;  /* Remove o sublinhado do link */
+  color: rgb(1, 6, 51);           /* Cor normal do texto */
+  transition: color 0.3s ease;  /* Suaviza a transição de cor */
+}
+.link {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  
+}

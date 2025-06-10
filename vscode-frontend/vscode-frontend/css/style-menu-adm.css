@@ -1,0 +1,92 @@
+/* Resetando alguns estilos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo geral para o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/img/fundo-adm.jpg') no-repeat;
+  background-size: cover; /* A imagem vai cobrir toda a área do fundo */
+  background-position: center center; /* A imagem será centralizada */
+  background-attachment: fixed; /* A imagem fica fixa enquanto você rola a página */
+  min-height: 100vh; /* Garante que o fundo ocupe toda a altura da janela */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Estilo para o container do menu */
+.menu-container {
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo levemente transparente */
+  padding: 30px;
+  width: 100%;
+  max-width: 450px;
+   border: 2px solid #007bff;
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor do container */
+  text-align: center;
+}
+
+/* Logo */
+.menu-container .logo {
+  width: 180px; /* Tamanho da logo */
+  margin-bottom: 20px; /* Espaço abaixo da logo */
+}
+
+/* Estilo para o título */
+h2 {
+  color: #007bff;  /* Cor azul para o título */
+  margin-bottom: 20px;
+}
+
+/* Estilizando a lista de links */
+ul {
+  list-style: none; /* Remove os marcadores de lista */
+  padding: 0;
+  width: 100%;
+}
+
+/* Estilizando cada item da lista */
+li {
+  background-color: #fff; /* Fundo branco para cada item */
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar um efeito de profundidade */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Suaviza a transição para os efeitos de hover */
+}
+
+/* Efeito de hover nos itens da lista */
+li:hover {
+  background-color: #007bff; /* Altera a cor de fundo ao passar o mouse */
+  color: white; /* Muda a cor do texto para branco */
+  transform: translateY(-3px); /* Pequeno efeito de deslocamento ao passar o mouse */
+}
+
+/* Estilizando os itens da lista quando clicados (opcional) */
+li:active {
+  transform: translateY(1px); /* Desloca o item para baixo quando pressionado */
+}
+
+/* Definindo a cor padrão para o texto */
+li {
+  color: #333;
+}
+
+/* Estilizando os links dentro da lista */
+a {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: inherit; /* Herda a cor do item da lista */
+}
+
+/* Efeito de hover nos links */
+a:hover {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: white; /* Torna o texto branco ao passar o mouse */
+}

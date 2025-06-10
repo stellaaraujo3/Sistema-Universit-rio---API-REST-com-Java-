@@ -1,0 +1,126 @@
+ * {
+   box-sizing: border-box;
+ }
+
+ body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Segoe UI', sans-serif;
+   background:linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/img/fundo.jpeg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 100vh;
+   color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .container {
+   text-align: center;
+   background-color: rgba(255, 255, 255, 0.232);
+   padding: 40px;
+   border-radius: 15px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+ }
+
+ .logo {
+   width: 350px;
+ }
+
+ h1 {
+   font-size: 2.5rem;
+   margin-bottom: 20px;
+ }
+
+ p {
+   font-size: 1.2rem;
+   margin-bottom: 30px;
+ }
+
+ .btn-group {
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+ }
+
+ .btn {
+   background-color: #fff;
+   color: #10054f;
+   padding: 12px 25px;
+   font-size: 1rem;
+   border: none;
+   border-radius: 25px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   text-decoration: none;
+ }
+
+ .btn:hover {
+   background-color: #f0f0f0;
+   transform: scale(1.05);
+ }
+
+ @media (max-width: 480px) {
+   h1 {
+     font-size: 2rem;
+   }
+
+   .btn-group {
+     flex-direction: column;
+   }
+ }
+
+ .login-container {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 40px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .login-container h2 {
+      margin-bottom: 25px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background-color: #3498db;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    a.voltar {
+      display: block;
+      margin-top: 20px;
+      color: #ddd;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    a.voltar:hover {
+      text-decoration: underline;
+    }
