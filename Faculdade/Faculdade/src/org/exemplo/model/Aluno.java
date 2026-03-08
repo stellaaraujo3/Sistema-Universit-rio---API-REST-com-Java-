@@ -1,4 +1,4 @@
-package org.exemplo;
+package org.exemplo.model;
 
 import java.time.LocalDate;
 
@@ -19,6 +19,7 @@ public class Aluno {
         this.curso = curso;
         this.cpf = cpf;
     }
+
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }

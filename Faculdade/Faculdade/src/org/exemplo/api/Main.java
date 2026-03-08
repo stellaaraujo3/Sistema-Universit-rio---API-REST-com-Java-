@@ -1,5 +1,7 @@
-package org.exemplo;
+package org.exemplo.api;
 
+import org.exemplo.UsuarioView;
+import org.exemplo.ValidadorCPF;
 import org.exemplo.dao.AlunosDAO;
 import org.exemplo.dao.CursosDAO;
 import org.exemplo.dao.UsuarioDAO;

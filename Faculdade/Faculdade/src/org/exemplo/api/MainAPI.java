@@ -1,4 +1,4 @@
-package org.exemplo;
+package org.exemplo.api;
 
 import static spark.Spark.*;
 import com.google.gson.Gson;
@@ -16,17 +16,17 @@ public class MainAPI {
 
         port(4567);
 
-        // LIBERAR CORS
+        // CORS
         options("/*", (request, response) -> {
 
-            String accessControlRequestHeaders = request.headers("Access-Control-Request-Headers");
-            if (accessControlRequestHeaders != null) {
-                response.header("Access-Control-Allow-Headers", accessControlRequestHeaders);
+            String headers = request.headers("Access-Control-Request-Headers");
+            if (headers != null) {
+                response.header("Access-Control-Allow-Headers", headers);
             }
 
-            String accessControlRequestMethod = request.headers("Access-Control-Request-Method");
-            if (accessControlRequestMethod != null) {
-                response.header("Access-Control-Allow-Methods", accessControlRequestMethod);
+            String methods = request.headers("Access-Control-Request-Method");
+            if (methods != null) {
+                response.header("Access-Control-Allow-Methods", methods);
             }
 
             return "OK";
@@ -41,9 +41,6 @@ public class MainAPI {
 
         Gson gson = new Gson();
         AlunosDAO alunosDAO = new AlunosDAO();
-
-        // TESTE API
-        get("/", (req, res) -> "{\"mensagem\":\"API funcionando!\"}");
 
         // LOGIN ADMIN
         post("/login-adm", (req, res) -> {
@@ -61,6 +58,39 @@ public class MainAPI {
                         "mensagem", "Login realizado com sucesso",
                         "usuario", usuario.getusuario(),
                         "tipo", usuario.gettipousuario()
+                ));
+
+            } else {
+
+                res.status(401);
+
+                return gson.toJson(Map.of(
+                        "erro", "Usuário ou senha inválidos"
+                ));
+            }
+        });
+
+        // LOGIN ALUNO
+        post("/login-aluno", (req, res) -> {
+
+            LoginRequest loginRequest = gson.fromJson(req.body(), LoginRequest.class);
+
+            UsuarioDAO dao = new UsuarioDAO();
+            Usuario usuario = dao.login(loginRequest.usuario, loginRequest.senha);
+
+            if (usuario != null && "usuario".equalsIgnoreCase(usuario.gettipousuario())) {
+
+                Aluno aluno = alunosDAO.buscarPorMatricula(usuario.getalunomatricula());
+
+                res.status(200);
+
+                return gson.toJson(Map.of(
+                        "mensagem", "Login realizado com sucesso",
+                        "nome", aluno.getNome(),
+                        "matricula", aluno.getMatricula(),
+                        "curso", aluno.getCurso(),
+                        "telefone", aluno.getTelefone(),
+                        "cpf", aluno.getCpf()
                 ));
 
             } else {
@@ -94,6 +124,13 @@ public class MainAPI {
                         "erro", "Erro ao cadastrar aluno: " + e.getMessage()
                 ));
             }
+        });
+
+        // LISTAR ALUNOS
+        get("/alunos", (req, res) -> {
+
+            return gson.toJson(alunosDAO.listarAlunos());
+
         });
 
     }

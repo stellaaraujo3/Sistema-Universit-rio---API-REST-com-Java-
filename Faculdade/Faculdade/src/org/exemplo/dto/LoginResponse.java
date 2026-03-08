@@ -1,4 +1,4 @@
-package org.exemplo;
+package org.exemplo.dto;
 
 public class LoginResponse {
     public String mensagem;

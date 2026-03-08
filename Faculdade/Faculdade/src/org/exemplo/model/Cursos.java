@@ -1,4 +1,4 @@
-package org.exemplo;
+package org.exemplo.model;
 
 public class Cursos {
     private int id;

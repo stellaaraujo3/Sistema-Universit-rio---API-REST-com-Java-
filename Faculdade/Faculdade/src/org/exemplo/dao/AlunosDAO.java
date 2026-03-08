@@ -1,4 +1,7 @@
-package org.exemplo;
+package org.exemplo.dao;
+
+import org.exemplo.model.Aluno;
+import org.exemplo.config.ConnectFactory;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -13,19 +16,26 @@ public class AlunosDAO {
 
     //tabela alunos sql
     public void createTable() {
-        String sql = """
-                CREATE TABLE IF NOT EXISTS alunos (
-                    id SERIAL PRIMARY KEY ,
-                    matricula INT UNIQUE NOT NULL,
-                    nome VARCHAR(255) NOT NULL,
-                    telefone VARCHAR(25),
-                    data_de_nascimento DATE NOT NULL,
-                    curso VARCHAR(100) NOT NULL,
-                    cpf VARCHAR(15) NOT NULL
-                );
-                """;
 
+        String sql = """
+            CREATE TABLE IF NOT EXISTS alunos (
+                id SERIAL PRIMARY KEY,
+                matricula INT UNIQUE NOT NULL,
+                nome VARCHAR(255) NOT NULL,
+                telefone VARCHAR(25),
+                data_de_nascimento DATE NOT NULL,
+                curso VARCHAR(100) NOT NULL,
+                cpf VARCHAR(15) NOT NULL
+            );
+            """;
+
+        try (Statement stmt = conexao.createStatement()) {
+            stmt.execute(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
+
 
     //metodo usado para iserir alunos no sistema.
     public void inserirAluno(Aluno aluno) {

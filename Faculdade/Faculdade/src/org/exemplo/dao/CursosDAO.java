@@ -1,4 +1,7 @@
-package org.exemplo;
+package org.exemplo.dao;
+
+import org.exemplo.config.ConnectFactory;
+import org.exemplo.model.Cursos;
 
 import java.sql.*;
 import java.util.ArrayList;
