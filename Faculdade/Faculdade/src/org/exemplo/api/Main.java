@@ -1,5 +1,14 @@
 package org.exemplo;
 
+import org.exemplo.dao.AlunosDAO;
+import org.exemplo.dao.CursosDAO;
+import org.exemplo.dao.UsuarioDAO;
+import org.exemplo.dao.TurmaDAO;
+import org.exemplo.model.Aluno;
+import org.exemplo.model.Cursos;
+import org.exemplo.model.Turma;
+import org.exemplo.model.Usuario;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
